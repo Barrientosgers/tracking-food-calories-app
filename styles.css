@@ -1,0 +1,40 @@
+:root{
+  --bg:#f6f8fa;
+  --card:#fff;
+  --accent:#2b6cb0;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+}
+.container{
+  max-width:900px;
+  margin:28px auto;
+  padding:20px;
+  background:var(--card);
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(10,10,10,0.06);
+}
+h1{margin:0 0 12px 0}
+.row{display:flex;gap:8px;align-items:center}
+.form .row input{padding:8px;border:1px solid #ddd;border-radius:6px;flex:1}
+.form .row input[type="date"]{flex:0 0 180px}
+.form .row button{padding:8px 12px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer}
+.actions{margin-top:8px}
+.summary{display:flex;gap:16px;margin:16px 0;color:var(--muted)}
+table{width:100%;border-collapse:collapse}
+thead th{text-align:left;padding:8px;border-bottom:1px solid #eee;color:var(--muted)}
+tbody td{padding:8px;border-bottom:1px solid #fafafa}
+.actions button{margin-right:6px;padding:6px 8px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+@media(max-width:600px){
+  .row{flex-direction:column;align-items:stretch}
+  .form .row input[type="date"]{width:100%}
+}
+
+.chart{margin:16px 0}
+.chart h2{margin:6px 0}
+canvas{max-width:100%}
